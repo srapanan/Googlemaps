@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/srapanan/Googlemaps/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/srapanan/Googlemaps/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+!<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <div class="container">
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+        <h2 class="panel-title">Add your Address</h2>
+      </div>
+      <div class="panel-body">
+        <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" class="form-control">
+        <div id="address">
+          <div class="row">
+            <div class="col-md-6">
+              <label class="control-label">Street address</label>
+              <input class="form-control" id="street_number" disabled="true">
+            </div>
+            <div class="col-md-6">
+              <label class="control-label">Route</label>
+              <input class="form-control" id="route" disabled="true">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="control-label">City</label>
+              <input class="form-control field" id="locality" disabled="true">
+            </div>
+            <div class="col-md-6">
+              <label class="control-label">State</label>
+              <input class="form-control" id="administrative_area_level_1" disabled="true">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="control-label">Zip code</label>
+              <input class="form-control" id="postal_code" disabled="true">
+            </div>
+            <div class="col-md-6">
+              <label class="control-label">Country</label>
+              <input class="form-control" id="country" disabled="true">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcIGfYDMu8bU9i663-ooSTVpOEP3vV8O4&libraries=places&callback=initAutocomplete" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="auto-complete.js"></script>
+  </body>
+</html>
